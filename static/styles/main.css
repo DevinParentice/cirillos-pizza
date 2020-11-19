@@ -1,0 +1,208 @@
+@import url(//db.onlinewebfonts.com/c/ab0c3618181cbbaaa8ef2c15fb8e3e25?family=Lucky+Fellas);
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+:root {
+	font-size: 16px;
+	font-family: 'PT Sans Narrow', sans-serif;
+	--text-primary: #d6d6d6;
+	--text-secondary: #ececec;
+	--bg-primary: #36465c;
+	--bg-secondary: #293546;
+	--transition-speed: 600ms;
+}
+
+body {
+	color: black;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}
+
+body::-webkit-scrollbar {
+	width: 0.75rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: #293546;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #36465c;
+}
+
+main {
+	margin-left: 22rem;
+	padding: 1rem;
+}
+
+.navbar {
+	position: fixed;
+	background-color: var(--bg-primary);
+	transition: width 600ms ease;
+	overflow: auto;
+}
+
+.navbar-nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}
+
+.nav-item {
+	width: 100%;
+}
+
+.nav-item:last-child {
+	margin-top: auto;
+}
+
+.nav-link {
+	display: flex;
+	align-items: center;
+	height: 5rem;
+	color: var(--text-primary);
+	text-decoration: none;
+	transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+	filter: grayscale(0%) opacity(1);
+	background: var(--bg-secondary);
+	color: var(--text-secondary);
+}
+
+.link-text {
+	display: none;
+	text-align: center;
+	width: 100%;
+}
+
+.nav-item .nav-link i {
+	font-size: 2rem;
+}
+
+.fa-primary,
+.fa-secondary {
+	transition: var(--transition-speed);
+}
+
+.logo {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+	text-align: center;
+	color: var(--text-secondary);
+	background: var(--bg-secondary);
+	font-size: 1.5rem;
+	letter-spacing: 0.3ch;
+	width: 100%;
+}
+
+.logo-text {
+	display: inline;
+	font-family: 'Lucky Fellas';
+	color: #e0bc64;
+	position: absolute;
+	left: -999px;
+	transition: var(--transition-speed);
+}
+  
+  /* Small screens */
+  @media only screen and (max-width: 600px) {
+	.navbar {
+	  bottom: 0;
+	  width: 100vw;
+	  height: 5rem;
+	}
+  
+	.fas::before {
+		display: visible;
+	}
+
+	.nav-item-desktop {
+		display: none;
+	}
+
+	.logo {
+	  display: none;
+	}
+  
+	.navbar-nav {
+	  flex-direction: row;
+	}
+  
+	.nav-link {
+	  justify-content: center;
+	}
+  
+	.info-text {
+		display: none;
+	}
+
+	main {
+	  margin: 0;
+	}
+	hr {
+		display: none;
+	}
+  }
+  
+  /* Large screens */
+  @media only screen and (min-width: 600px) {
+	.navbar {
+	  top: 0;
+	  width: 21rem;
+	  height: 100vh;
+	  box-shadow: 10px;
+	  border: 3px red;
+	}
+	
+	.nav-item-mobile {
+		display: none;
+	}
+
+	.fas::before {
+		display: none;
+	}
+
+	.navbar .link-text {
+	  display: inline;
+	  font-size: 1.5rem;
+	}
+	
+	.nav-link:not(.logo-link) {
+		height: 4rem;
+	}
+
+	.logo-link {
+		height: 8rem;
+	}
+
+	.navbar .logo-text {
+	  left: 0px;
+	  font-size: 70px;
+	  color: #e0bc64;
+	}
+
+	.info-text {
+		color: var(--text-primary);
+		text-decoration: none;
+		transition: var(--transition-speed);
+	}
+
+	.info-text-last {
+		margin-top: 20px;
+	}
+
+	.first-nav-item {
+		margin-top: 50%;
+	}
+
+	hr {
+		width: 80%;
+	}
+  }
