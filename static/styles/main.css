@@ -1,6 +1,12 @@
 @import url(//db.onlinewebfonts.com/c/ab0c3618181cbbaaa8ef2c15fb8e3e25?family=Lucky+Fellas);
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 :root {
 	font-size: 16px;
 	font-family: 'PT Sans Narrow', sans-serif;
@@ -16,23 +22,18 @@ body {
 	background-color: white;
 	margin: 0;
 	padding: 0;
+	overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
 }
 
 body::-webkit-scrollbar {
-	width: 0.75rem;
-}
-
-body::-webkit-scrollbar-track {
-	background: #293546;
-}
-
-body::-webkit-scrollbar-thumb {
-	background: #36465c;
+	width: 0;
+	height: 0;
 }
 
 main {
-	margin-left: 22rem;
-	padding: 1rem;
+	margin-left: 21rem;
 }
 
 .navbar {
@@ -192,6 +193,7 @@ main {
 		color: var(--text-primary);
 		text-decoration: none;
 		transition: var(--transition-speed);
+		font-family: 'PT Sans Narrow', sans-serif;
 	}
 
 	.info-text-last {
