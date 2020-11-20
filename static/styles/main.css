@@ -17,6 +17,10 @@
 	--transition-speed: 600ms;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	color: black;
 	background-color: white;
@@ -41,6 +45,7 @@ main {
 	background-color: var(--bg-primary);
 	transition: width 600ms ease;
 	overflow: auto;
+	z-index: 1;
 }
 
 .navbar-nav {

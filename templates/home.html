@@ -2,39 +2,23 @@
 
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/home.css') }}">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type=text/javascript src="{{ url_for('static', filename='js/scroll.js') }}"></script> -->
 {% endblock head %}
 
 {% block content %}
 <header class="image">
-	<h1></h1>
-	<p></p>
-	<a href="#" class="button"></a>
+	<div class="button-container" id="down-button">
+		<a href="#cards">
+			<p class="arrow-text">Explore Cirillo's</p>
+			<svg id="more-arrows">
+				<polygon class="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 " />
+				<polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 " />
+				<polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 " />
+			</svg>
+		</a>
+	</div>
 </header>
-<div class="see-button">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad error dolor temporibus porro incidunt excepturi
-		quia
-		deleniti, perferendis minus voluptates animi dolorum veritatis aperiam laudantium, a eius molestiae,
-		reiciendis
-		rem.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad error dolor temporibus porro incidunt excepturi
-		quia
-		deleniti, perferendis minus voluptates animi dolorum veritatis aperiam laudantium, a eius molestiae,
-		reiciendis
-		rem.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad error dolor temporibus porro incidunt excepturi
-		quia
-		deleniti, perferendis minus voluptates animi dolorum veritatis aperiam laudantium, a eius molestiae,
-		reiciendis
-		rem.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad error dolor temporibus porro incidunt excepturi
-		quia
-		deleniti, perferendis minus voluptates animi dolorum veritatis aperiam laudantium, a eius molestiae,
-		reiciendis
-		rem.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad error dolor temporibus porro incidunt excepturi
-		quia
-		deleniti, perferendis minus voluptates animi dolorum veritatis aperiam laudantium, a eius molestiae,
-		reiciendis
-		rem.</p>
+<div class="cards" id="cards">
 </div>
 {% endblock content %}
