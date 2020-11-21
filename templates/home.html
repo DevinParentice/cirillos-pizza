@@ -9,7 +9,7 @@
 {% block content %}
 <header class="image">
 	<div class="button-container" id="down-button">
-		<a href="#cards">
+		<a href="#featured">
 			<p class="arrow-text">Explore Cirillo's</p>
 			<svg id="more-arrows">
 				<polygon class="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 " />
@@ -19,6 +19,118 @@
 		</a>
 	</div>
 </header>
-<div class="cards" id="cards">
+<div class="cards" id="featured">
+	<h1 class="card-title">Featured Items</h1>
+	<section class="card-list">
+		<article class="card">
+			<header class="card-header">
+				<img src="../static/img/Jalapeno-Popper-Pizza.jpg" alt="Jalapeno Popper Pizza">
+			</header>
+
+			<div class="card-author">
+				<div class="author-name-prefix">Jalapeno Popper Pizza</div>
+				<div class="author-name">
+					Whipped cream cheese, hardwood smoked bacon, roasted jalapenos, cheddar and mozzerella cheeses
+				</div>
+			</div>
+		</article>
+
+		<article class="card">
+			<header class="card-header">
+				<img src="../static/img/Margherita-Pizza.jpg" alt="Margherita Pizza">
+			</header>
+
+			<div class="card-author">
+				<div class="author-name-prefix">Margherita Pizza</div>
+				<div class="author-name">
+					San Marzano tomato, fresh mozzerella, freshly torn basil, extra virgin olive oil
+				</div>
+			</div>
+		</article>
+
+		<article class="card">
+			<header class="card-header">
+				<img src="../static/img/Pear-Pizza.jpg" alt="Pear Pizza">
+			</header>
+
+			<div class="card-author">
+				<div class="author-name-prefix">Pear Pizza</div>
+				<div class="author-name">
+					Fresh pear, leafy green arugula, goat cheese, balsamic vinegar drizzle
+				</div>
+			</div>
+		</article>
+
+		<article class="card">
+			<header class="card-header">
+				<img src="../static/img/Fig-Pizza.jpeg" alt="Fig Pizza">
+			</header>
+
+			<div class="card-author">
+				<div class="author-name-prefix">Fig Pizza</div>
+				<div class="author-name">
+					Fig, fresh pear, red onion, mozzerella and creamy brie cheese, balsamic vinegar drizzle
+				</div>
+			</div>
+		</article>
+
+		<article class="card">
+			<header class="card-header">
+				<img src="../static/img/Radicchio-Pizza.jpg" alt="Radicchio Pizza">
+			</header>
+
+			<div class="card-author">
+				<div class="author-name-prefix">Radicchio Pizza</div>
+				<div class="author-name">
+					Marinated radicchio, red caramelized onions, fresh mozzerella and pecorino cheeses
+				</div>
+			</div>
+		</article>
+
+		<article class="card">
+			<header class="card-header">
+				<img src="../static/img/Artichoke-Pizza.jpg" alt="Artichoke Pizza">
+			</header>
+
+			<div class="card-author">
+				<div class="author-name-prefix">Artichoke Pizza</div>
+				<div class="author-name">
+					Marinated artichoke hearts, sundried tomatoes, mozzerella and pecorino cheeses
+				</div>
+			</div>
+		</article>
+
+		<article class="card">
+			<header class="card-header">
+				<img src="../static/img/BBQ-Chicken-Pizza.jpg" alt="BBQ Chicken Pizza">
+			</header>
+
+			<div class="card-author">
+				<div class="author-name-prefix">BBQ Chicken Pizza</div>
+				<div class="author-name">
+					BBQ sauce, grilled marinated chicken breasts, mozzerella and cheddar cheeses
+				</div>
+			</div>
+		</article>
+	</section>
+	<div class='container'>
+		<ul>
+			<li>
+				<a class='animated-arrow' href='#'>
+					<span class='the-arrow -left'>
+						<span class='shaft'></span>
+					</span>
+					<span class='main'>
+						<span class='text'>
+							See Full Menu
+						</span>
+						<span class='the-arrow -right'>
+							<span class='shaft'></span>
+						</span>
+					</span>
+				</a>
+			</li>
+		</ul>
+	</div>
 </div>
 {% endblock content %}

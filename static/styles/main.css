@@ -5,11 +5,11 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'PT Sans Narrow', sans-serif;
 }
 
 :root {
 	font-size: 16px;
-	font-family: 'PT Sans Narrow', sans-serif;
 	--text-primary: #d6d6d6;
 	--text-secondary: #ececec;
 	--bg-primary: #36465c;
@@ -38,6 +38,10 @@ body::-webkit-scrollbar {
 
 main {
 	margin-left: 21rem;
+}
+
+a {
+	text-decoration: none;
 }
 
 .navbar {
@@ -199,6 +203,10 @@ main {
 		text-decoration: none;
 		transition: var(--transition-speed);
 		font-family: 'PT Sans Narrow', sans-serif;
+		font-size: 24px;
+		text-align: center;
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 
 	.info-text-last {
