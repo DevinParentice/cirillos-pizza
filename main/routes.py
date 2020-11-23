@@ -11,4 +11,4 @@ def home():
 
 @main.route('/menu')
 def menu():
-    return render_template('menu.html', menu_request=True)
+    return render_template('menu.html')

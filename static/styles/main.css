@@ -85,6 +85,7 @@ a {
 	color: var(--text-primary);
 	text-decoration: none;
 	transition: var(--transition-speed);
+	cursor: pointer;
 }
 
 .nav-link:hover {
