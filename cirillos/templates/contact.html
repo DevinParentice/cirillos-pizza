@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/form.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<body>
+	<div class="form-container">
+		<h2>Contact</h2>
+
+		{% for message in form.name.errors %}
+		<div class="flash">{{ message }}</div>
+		{% endfor %}
+
+		{% for message in form.email.errors %}
+		<div class="flash">{{ message }}</div>
+		{% endfor %}
+
+		{% for message in form.subject.errors %}
+		<div class="flash">{{ message }}</div>
+		{% endfor %}
+
+		{% for message in form.message.errors %}
+		<div class="flash">{{ message }}</div>
+		{% endfor %}
+
+		<form action="{{ url_for('main.contact') }}" method=post>
+			{{ form.hidden_tag() }}
+
+			<div class="form-group">
+				{{ form.name.label(class="form-control-label") }}
+
+				{% if form.name.errors %}
+				{{ form.name(class="form-control form-control-lg is-invalid") }}
+				<div class="invalid-feedback">
+					{% for error in form.name.errors %}
+					<span>{{ error }}</span>
+					{% endfor %}
+				</div>
+				{% else %}
+				{{ form.name(class="form-control form-control-lg") }}
+				{% endif %}
+			</div>
+
+			<div class="form-group">
+				{{ form.email.label(class="form-control-label") }}
+
+				{% if form.email.errors %}
+				{{ form.email(class="form-control form-control-lg is-invalid") }}
+				<div class="invalid-feedback">
+					{% for error in form.email.errors %}
+					<span>{{ error }}</span>
+					{% endfor %}
+				</div>
+				{% else %}
+				{{ form.email(class="form-control form-control-lg") }}
+				{% endif %}
+			</div>
+
+			<div class="form-group">
+				{{ form.subject.label(class="form-control-label") }}
+
+				{% if form.subject.errors %}
+				{{ form.subject(class="form-control form-control-lg is-invalid") }}
+				<div class="invalid-feedback">
+					{% for error in form.subject.errors %}
+					<span>{{ error }}</span>
+					{% endfor %}
+				</div>
+				{% else %}
+				{{ form.subject(class="form-control form-control-lg") }}
+				{% endif %}
+			</div>
+
+			<div class="form-group">
+				{{ form.message.label(class="form-control-label") }}
+				{{ form.message(class="form-control form-control-lg") }}
+			</div>
+
+			{{ form.submit }}
+		</form>
+	</div>
+</body>
+{% endblock %}

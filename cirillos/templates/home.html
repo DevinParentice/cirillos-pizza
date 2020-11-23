@@ -2,14 +2,17 @@
 
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/home.css') }}">
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type=text/javascript src="{{ url_for('static', filename='js/scroll.js') }}"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type=text/javascript src="{{ url_for('static', filename='js/fadeOut.js') }}"></script>
 {% endblock head %}
 
 {% block content %}
 
 <body>
 	<main>
+		{% for category, message in get_flashed_messages(with_categories=True) %}
+		<p class="alert alert-{{category}}" id="alert">{{ message }}</p>
+		{% endfor %}
 		<header class="image">
 			<p class="mobile-title">Cirillo's</p>
 			<div class="button-container" id="down-button">
