@@ -50,6 +50,7 @@ body::-webkit-scrollbar {
 
 main {
 	margin-left: 21rem;
+	background-color: #faf7eb;
 }
 
 a {

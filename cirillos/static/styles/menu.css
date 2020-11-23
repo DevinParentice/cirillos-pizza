@@ -1,11 +1,11 @@
 body {
 	font-family: "libre baskerville", georgia, serif;
-	background-color: #fffff9;
+	background-color: #faf7eb;
 	color: #5f5a44;
   }
   
   .logo {
-	background-color: #fffff9;
+	background-color: #faf7eb;
 	z-index: 3;
   }
   
@@ -47,6 +47,10 @@ body {
 	font-size: 12px;
   }
   
+  .providers {
+	  cursor: pointer;
+  }
+
   img {
 	mix-blend-mode: multiply;
   }
@@ -152,6 +156,7 @@ body {
 	.container {
 	  display: grid;
 	  grid-template-areas: "header header header" "b--header b--header b--header" "breakfast breakfast breakfast" "l--header l--header l--header" "lunch lunch lunch" "sides sides sides";
+	  border-top: 10px solid #293546;
 	}
   
 	.atf {

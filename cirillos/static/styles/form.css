@@ -1,78 +1,124 @@
 /* Contact form */
 
 .form-container {
-	margin-left: 21rem;
 	width: 50%;
 	margin: 0 auto;
+	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  
+	justify-content: center;
+	align-items: center;
+}
+
+.form-title {
+	font-size: 80px;
+	font-weight: 200;
+	text-align: center;
 }
 
 form label {
-	font-size: 1.2em;
+	font-size: 1.5em;
 	font-weight: bold;
 	display: block;
-	padding: 10px 0;
-  }
-   
-  form input#name,
-  form input#email,
-  form input#subject {
-	width: 400px;
-	background-color: #fafafa;
-	-webkit-border-radius: 3px;
-	   -moz-border-radius: 3px;
-			border-radius: 3px;
-	border: 1px solid #cccccc;
-	padding: 5px;
-	font-size: 1.1em;
-  }
-   
-  form textarea#message {
-	width: 500px;
-	height: 100px;
-	background-color: #fafafa;
-	-webkit-border-radius: 3px;
-	   -moz-border-radius: 3px;
-			border-radius: 3px;
-	border: 1px solid #cccccc;
-	margin-bottom: 10px;
-	padding: 5px;
-	font-size: 1.1em;
-  }
-   
-  form input#submit {
-	display: block;
-	-webkit-border-radius: 3px; 
-	   -moz-border-radius: 3px;
-			border-radius: 3px;
-	border:1px solid #d8d8d8;
-	padding: 10px; 
-	font-weight:bold; 
-	text-align: center; 
-	color: #000000; 
-	background-color: #f4f4f4;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e5e5e5));
-	background-image: -webkit-linear-gradient(top, #f4f4f4, #e5e5e5);
-	background-image: -moz-linear-gradient(top, #f4f4f4, #e5e5e5);
-	background-image: -ms-linear-gradient(top, #f4f4f4, #e5e5e5);
-	background-image: -o-linear-gradient(top, #f4f4f4, #e5e5e5);
-	background-image: linear-gradient(top, #f4f4f4, #e5e5e5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f4f4f4, endColorstr=#e5e5e5);
-  }
-   
-  form input#submit:hover{
-	cursor: pointer;
-	border:1px solid #c1c1c1; 
-	background-color: #dbdbdb;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dbdbdb), color-stop(100%, #cccccc));
-	background-image: -webkit-linear-gradient(top, #dbdbdb, #cccccc);
-	background-image: -moz-linear-gradient(top, #dbdbdb, #cccccc);
-	background-image: -ms-linear-gradient(top, #dbdbdb, #cccccc);
-	background-image: -o-linear-gradient(top, #dbdbdb, #cccccc);
-	background-image: linear-gradient(top, #dbdbdb, #cccccc);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#dbdbdb, endColorstr=#cccccc);
-  }
+}
   
   /* Message flashing */
 .flash {
 	background-color: #FBB0B0;
 	padding: 10px;
 	width: 400px;
+  }
+
+  .contact-us {
+	background: #faf7eb;
+	padding: 50px 100px;
+	border-top: 10px solid #293546;
+  }
+  
+  label, .text-input, textarea {
+	display: block;
+	width: 100%;
+	font-size: 12pt;
+	line-height: 24pt;
+  }
+  
+  .text-input {
+	margin-bottom: 24pt;
+  }
+  
+  .textarea-input {
+	  margin-bottom: 0;
+  }
+
+  .input-info-text {
+	  margin-bottom: 24pt;
+  }
+
+  h3 {
+	font-weight: normal;
+	font-size: 10pt;
+	line-height: 24pt;
+	font-style: italic;
+	margin: 0 0 0.5em 0;
+  }
+  
+  span {
+	font-size: 8pt;
+  }
+  
+  em {
+	color: red;
+	font-weight: bold;
+  }
+  
+  input, textarea {
+	border: none;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+	background: #f8f7f3;
+	padding-left: 5px;
+	outline: none;
+  }
+  
+  input:focus, textarea:focus {
+	border: 1px solid #36465c;
+  }
+  
+  textarea {
+	resize: none;
+  }
+  
+  .submit-button {
+	display: block;
+	float: right;
+	line-height: 24pt;
+	padding: 0 20px;
+	border: none;
+	background: #36465c;
+	color: white;
+	letter-spacing: 2px;
+	transition: 0.2s all ease-in-out;
+	border-bottom: 2px solid transparent;
+	outline: none;
+	cursor: pointer;
+  }
+  .submit-button:hover {
+	background: inherit;
+	color: #36465c;
+	border-bottom: 2px solid #36465c;
+  }
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus {
+	border: 1px solid #36465c;
+	-webkit-text-fill-color: #2A293E;
+	box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+	-webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+	transition: background-color 5000s ease-in-out 0s;
   }
