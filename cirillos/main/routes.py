@@ -26,3 +26,8 @@ def contact():
         flash('We have received your email! We will get back to you as soon as possible.', 'success')
         return redirect(url_for('main.home'))
     return render_template('contact.html', form=form)
+
+
+@main.route('/covid')
+def covid():
+    return render_template('covid.html')

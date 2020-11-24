@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/covid.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<body>
+	<main>
+		<div class="article">
+			<div class="header">
+				<h1>Cirillo's COVID-19 Procedures</h1>
+				<hr class="covid-line" />
+				<h3>Your safety is important to us</h3>
+			</div>
+			<div class="content">
+				<h1 class="subheader">Guiding Principles</h1>
+				<p class="paragraph">Cirillo's cares about the health and safety of our customers above all else. It is
+					of upmost importance of Bob Mersereau, our owner, and our staff that we are able to give you great
+					service while following the CDC's guidelines. This means that staff will be tested regularly, and
+					surfaces will be cleaned often to prevent the spread of germs.</p>
+				<h1 class="subheader">Masks</h1>
+				<p class="paragraph">The CDC recommends the use of masks to recude the risk of COVID-19 spread. Masks
+					will be worn by all employees and are required to be granted entry into the restaurant.</p>
+				<p class="paragraph">The only exceptions to this rule are:</p>
+				<ul class="covid-list">
+					<li class="covid-list-item">Babies and children younger than 2 years old</li>
+					<li class="covid-list-item">Anyone who is incapacitated or otherwise unable to remove the mask
+						without assistance</li>
+					<li class="covid-list-item">Anyone who is having a medical emergency</li>
+				</ul>
+				<p class="paragraph">In addition to masks being worn when not eating, all tables will be at least 6 feet
+					apart to separate diners to a safe distance from one another. Being socially distant is an important
+					part of curbing the spread of the virus.</p>
+				<h1 class="subheader">Shared Objects</h1>
+				<p class="paragraph final">At our tables, we will no longer be providing physical members for our
+					patrons to reduce the risk of spread. Instead, a QR code will be at each table which you can scan
+					with your smartphone's camera. It will open up our menu directly on your phone. Additionally,
+					Cirillo's will be limiting the sharing of condiments and salt and pepper. Single use packets will be
+					available at request.</p>
+			</div>
+		</div>
+	</main>
+</body>
+{% endblock %}
