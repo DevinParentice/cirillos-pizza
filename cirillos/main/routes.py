@@ -31,3 +31,8 @@ def contact():
 @main.route('/covid')
 def covid():
     return render_template('covid.html')
+
+
+@main.route('/story')
+def story():
+    return render_template('story.html')

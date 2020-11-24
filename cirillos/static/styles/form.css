@@ -16,12 +16,13 @@
 	font-size: 80px;
 	font-weight: 200;
 	text-align: center;
+	font-family: 'Merriweather', sans-serif;
 }
 
 form label {
-	font-size: 1.5em;
-	font-weight: bold;
+	font-size: 1em;
 	display: block;
+	font-family: 'Merriweather', sans-serif;
 }
   
   /* Message flashing */
@@ -42,6 +43,7 @@ form label {
 	width: 100%;
 	font-size: 12pt;
 	line-height: 24pt;
+	font-family: 'Merriweather', sans-serif;
   }
   
   .text-input {
@@ -62,10 +64,12 @@ form label {
 	line-height: 24pt;
 	font-style: italic;
 	margin: 0 0 0.5em 0;
+	font-family: 'Merriweather', sans-serif;
   }
   
   span {
 	font-size: 8pt;
+	font-family: 'Merriweather', sans-serif;
   }
   
   em {
@@ -103,6 +107,7 @@ form label {
 	border-bottom: 2px solid transparent;
 	outline: none;
 	cursor: pointer;
+	font-family: 'Merriweather', sans-serif;
   }
   .submit-button:hover {
 	background: inherit;
