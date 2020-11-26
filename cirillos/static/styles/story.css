@@ -294,7 +294,6 @@ p {
 	border-radius: 0;
 	width: 310px;
 	height: 413px;
-	max-width: 100%;
   }
 
   .container__image:hover .container__info {
