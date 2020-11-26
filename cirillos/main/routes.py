@@ -36,3 +36,13 @@ def covid():
 @main.route('/story')
 def story():
     return render_template('story.html')
+
+
+@main.route('/privacy')
+def privacy():
+    return render_template('privacy.html')
+
+
+@main.route('/sitemap')
+def sitemap():
+    return render_template('sitemap.html')

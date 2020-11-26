@@ -14,7 +14,9 @@
 		<p class="alert alert-{{category}}" id="alert">{{ message }}</p>
 		{% endfor %}
 		<header class="image">
-			<p class="mobile-title">Cirillo's</p>
+			<div style="max-width: 650px;">
+				<img src="../static/img/logo-gold.png" alt="Cirillo's Logo" class="home-logo">
+			</div>
 			<div class="button-container" id="down-button">
 				<a href="#featured">
 					<svg id="more-arrows">
@@ -27,7 +29,7 @@
 			</div>
 		</header>
 		<div class="cards" id="featured">
-			<h1 class="card-title">Featured Items</h1>
+			<h1 class="card-title">Popular Items</h1>
 			<section class="card-list">
 				<article class="card">
 					<header class="card-header">
@@ -35,9 +37,9 @@
 					</header>
 
 					<div class="card-author">
-						<div class="author-name-prefix">Jalapeno Popper Pizza</div>
+						<div class="author-name-prefix">Jalapeno Popper</div>
 						<div class="author-name">
-							Whipped cream cheese, hardwood smoked bacon, roasted jalapenos, cheddar and mozzerella
+							Whipped cream cheese, hardwood smoked bacon, roasted jalapenos, cheddar and mozarella
 							cheeses
 						</div>
 					</div>
@@ -49,35 +51,35 @@
 					</header>
 
 					<div class="card-author">
-						<div class="author-name-prefix">Margherita Pizza</div>
+						<div class="author-name-prefix">Margherita</div>
 						<div class="author-name">
-							San Marzano tomato, fresh mozzerella, freshly torn basil, extra virgin olive oil
+							San Marzano tomato, fresh mozzarella, freshly torn basil, extra virgin olive oil
 						</div>
 					</div>
 				</article>
 
 				<article class="card">
 					<header class="card-header">
-						<img src="../static/img/Pear-Pizza.jpg" alt="Pear Pizza">
+						<img src="../static/img/Mozz-Triangles.jpeg" alt="Pear Pizza">
 					</header>
 
 					<div class="card-author">
-						<div class="author-name-prefix">Pear Pizza</div>
+						<div class="author-name-prefix">Mozzarella Triangles</div>
 						<div class="author-name">
-							Fresh pear, leafy green arugula, goat cheese, balsamic vinegar drizzle
+							Breaded mozzarella fried until crisp, seasoned and served with homemade sauce
 						</div>
 					</div>
 				</article>
 
 				<article class="card">
 					<header class="card-header">
-						<img src="../static/img/Fig-Pizza.jpeg" alt="Fig Pizza">
+						<img src="../static/img/Pepperoni-Pizza.jpg" alt="Pepperoni Pizza">
 					</header>
 
 					<div class="card-author">
-						<div class="author-name-prefix">Fig Pizza</div>
+						<div class="author-name-prefix">Pepperoni</div>
 						<div class="author-name">
-							Fig, fresh pear, red onion, mozzerella and creamy brie cheese, balsamic vinegar drizzle
+							San Marzano tomato, crispy pepperoni, Romano/parmesan cheese blend
 						</div>
 					</div>
 				</article>
@@ -88,9 +90,9 @@
 					</header>
 
 					<div class="card-author">
-						<div class="author-name-prefix">Radicchio Pizza</div>
+						<div class="author-name-prefix">Radicchio</div>
 						<div class="author-name">
-							Marinated radicchio, red caramelized onions, fresh mozzerella and pecorino cheeses
+							Marinated radicchio, red caramelized onions, fresh mozarella and pecorino cheeses
 						</div>
 					</div>
 				</article>
@@ -101,9 +103,9 @@
 					</header>
 
 					<div class="card-author">
-						<div class="author-name-prefix">Artichoke Pizza</div>
+						<div class="author-name-prefix">Artichoke</div>
 						<div class="author-name">
-							Marinated artichoke hearts, sundried tomatoes, mozzerella and pecorino cheeses
+							Marinated artichoke hearts, sundried tomatoes, mozarella and pecorino cheeses
 						</div>
 					</div>
 				</article>
@@ -114,9 +116,9 @@
 					</header>
 
 					<div class="card-author">
-						<div class="author-name-prefix">BBQ Chicken Pizza</div>
+						<div class="author-name-prefix">Barbeque Chicken</div>
 						<div class="author-name">
-							BBQ sauce, grilled marinated chicken breasts, mozzerella and cheddar cheeses
+							BBQ sauce, grilled marinated chicken breasts, mozarella and cheddar cheeses
 						</div>
 					</div>
 				</article>
@@ -140,10 +142,21 @@
 					</li>
 				</ul>
 			</div>
-
+			<div class="mobile-links">
+				<a class="effect1 top-mobile-link" href="{{ url_for('main.story') }}"
+					style="font-family: 'Merriweather';">
+					Our Story
+					<span class="bg"></span>
+				</a>
+				<div style="padding-bottom: 15px;"></div>
+				<br>
+				<a class="effect1" href="{{ url_for('main.covid') }}" style="font-family: 'Merriweather';">
+					COVID-19 Precautions
+					<span class="bg"></span>
+				</a>
+			</div>
 			<div class='embedsocial-instagram' data-ref="c445564432341e766b4182f425472bc0464b2d3e"></div>
 			<script>(function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/in.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialInstagramScript"));</script>
-
 		</div>
 	</main>
 </body>

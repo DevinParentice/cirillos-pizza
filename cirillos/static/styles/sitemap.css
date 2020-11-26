@@ -1,0 +1,39 @@
+main {
+	border-top: 10px solid #293546;
+}
+
+.header {
+	padding-top: 5vh;
+	color: #293546;
+	font-size: 250%;
+	text-align: center;
+}
+
+.map-list-container {
+	text-align: center;
+	padding-top: 10vh;
+}
+
+.map-list li {
+	padding-bottom: 20px;
+}
+
+.map-list li a {
+	color: #293546;
+	font-family: 'Merriweather', sans-serif;
+	font-size: 25px;
+}
+
+@media only screen and (max-width: 1000px) {
+	main {
+		margin: 0;
+	}
+
+	.form-container {
+		width: 75%;
+	}
+
+	.contact-us {
+		padding: 25px 50px;
+	}
+}

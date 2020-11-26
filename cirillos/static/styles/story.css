@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,900);
+@import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap');
 body {
   font-size: 100%;
   line-height: 1.6;
@@ -6,7 +6,12 @@ body {
 
 main {
 	border-top: 10px solid #293546;
+	/* display: flex; */
 }
+
+/* main section {
+	flex: 0 0 75%;
+} */
 
 .block-content {
   min-height: 100vh;
@@ -34,10 +39,10 @@ block-content p {
 
 .subtitle {
   font-family: "Merriweather", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  font-size: 1em;
+  font-size: 1.5em;
   margin: 0.5em 0;
 }
 
@@ -209,6 +214,114 @@ p {
           animation-delay: 2.3s;
 }
 
+.signature {
+	font-family: 'Mr De Haviland', cursive;
+	font-size: 55px;
+	margin-left: 42px;
+	margin-top: -50px;
+	-webkit-animation: revealFromLeft 0.7s 2.5s ease both 1;
+    animation: revealFromLeft 0.5s 2.7s ease both 1;
+}
+
+
+
+
+
+
+
+
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+  }
+  .container__image {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 125px;
+	height: 125px;
+	border-radius: 50%;
+	background-size: cover;
+	transition: ease-in-out .3s;
+	z-index: 2;
+  }
+
+  .image__josephine {
+	  background-image: url(../img/Josephine.jpeg);
+  }
+
+  .image__bob {
+	  background-image: url(../img/Bob.jpeg);
+  }
+
+  .image__cirillos {
+	  background-image: url(../img/outdoors.jpeg);
+  }
+
+  .container__image:before {
+	content: ' ';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	background: inherit;
+	background-position: bottom;
+	transform: scaleX(0.4);
+	transition: ease-in-out .4s;
+	border-radius: 120px;
+	transform-origin: right;
+	opacity: 0;
+	z-index: -1;
+  }
+  .container__image .container__info {
+	position: relative;
+	line-height: 1.8;
+	transition: ease-in-out .3s;
+	opacity: 0;
+  }
+  .container__image .container__location {
+	transition-delay: .15s;
+  }
+  .container__image:hover {
+	border-radius: 0;
+	width: 310px;
+	height: 413px;
+	max-width: 100%;
+  }
+
+  .container__image:hover .container__info {
+	transform: translate3d(-40%, 0px, 0px);
+	opacity: 1;
+	color: #293546;
+	font-size: 1.1em;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @-webkit-keyframes revealFromLeft {
   0% {
     -webkit-transform: translateX(-1em);
@@ -308,5 +421,22 @@ p {
 @media only screen and (max-width: 1000px) {
 	main {
 		margin: 0;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.l-contained {
+		padding-left: 2em;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.container__image:hover .container__info {
+		opacity: 0;
+	}
+
+	.signature {
+		font-size: 45px;
+		margin-top: 50px;
 	}
 }

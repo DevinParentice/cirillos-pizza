@@ -249,6 +249,12 @@ a {
 	color: #2f2f2f;
   }
   
+.fa-shopping-bag {
+	background: #526b8d;
+	border-radius: 50%;
+	padding: 10px;
+}
+
   @media screen and (min-width: 24.375em) {
 	.legal .legal__links {
 	  margin-left: auto;
@@ -337,8 +343,8 @@ a {
 	}
 
 	.online-icons {
-		width: 35px;
-		height: 35px;
+		width: 45px;
+		height: 45px;
 		border-radius: 50%;
 	}
 
@@ -450,5 +456,4 @@ a {
 		border-radius: 50%;
 		margin-top: 10px;
 	}
-
   }

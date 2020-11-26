@@ -1,5 +1,14 @@
 /* Contact form */
 
+body {
+	font-size: 100%;
+	line-height: 1.6;
+  }
+
+main {
+	border-top: 10px solid #293546;
+}
+
 .form-container {
 	width: 50%;
 	margin: 0 auto;
@@ -13,16 +22,18 @@
 }
 
 .form-title {
-	font-size: 80px;
-	font-weight: 200;
 	text-align: center;
-	font-family: 'Merriweather', sans-serif;
+	font-size: 4em;
+	line-height: 1;
+	letter-spacing: 0.02em;
+	color: #293546;
 }
 
 form label {
 	font-size: 1em;
 	display: block;
 	font-family: 'Merriweather', sans-serif;
+	color: #293546;
 }
   
   /* Message flashing */
@@ -35,7 +46,6 @@ form label {
   .contact-us {
 	background: #faf7eb;
 	padding: 50px 100px;
-	border-top: 10px solid #293546;
   }
   
   label, .text-input, textarea {
@@ -52,6 +62,7 @@ form label {
   
   .textarea-input {
 	  margin-bottom: 0;
+	  height: 150px;
   }
 
   .input-info-text {
@@ -65,16 +76,12 @@ form label {
 	font-style: italic;
 	margin: 0 0 0.5em 0;
 	font-family: 'Merriweather', sans-serif;
+	color: #293546;
   }
   
   span {
 	font-size: 8pt;
 	font-family: 'Merriweather', sans-serif;
-  }
-  
-  em {
-	color: red;
-	font-weight: bold;
   }
   
   input, textarea {
@@ -131,5 +138,13 @@ form label {
 @media only screen and (max-width: 1000px) {
 	main {
 		margin: 0;
+	}
+
+	.form-container {
+		width: 75%;
+	}
+
+	.contact-us {
+		padding: 25px 50px;
 	}
 }

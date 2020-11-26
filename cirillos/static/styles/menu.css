@@ -50,15 +50,15 @@ body {
   .providers {
 	  cursor: pointer;
   }
-
-  img {
-	mix-blend-mode: multiply;
-  }
   
   .advert {
 	display: none;
   }
   
+  .sandwich-list {
+	  padding-bottom: 25px;
+  }
+
   .bdb {
 	border-bottom: 2px dotted #5f5a44;
   }
@@ -282,72 +282,6 @@ body {
 
 	.container {
 	  grid-template-areas: "top--left top--left header header header header header top--right top--right" "b--header b--header b--header b--header . l--header l--header l--header l--header" "breakfast breakfast breakfast breakfast sides lunch lunch lunch lunch" "bottom bottom bottom bottom bottom bottom bottom bottom bottom";
-	}
-  
-	.bottom {
-	  grid-area: bottom;
-	  display: -webkit-box;
-	  display: flex;
-	  padding-top: 24px;
-	  border-top: 2px dotted #5f5a44;
-	  margin-top: 16px;
-	}
-  
-	.advert {
-	  display: block;
-	  text-align: center;
-	}
-  
-	.advert img {
-	  padding-bottom: 16px;
-	}
-  
-	.ad--railroad {
-	  grid-area: top--left;
-	  border-bottom: 2px dotted #5f5a44;
-	  border-right: 2px dotted #5f5a44;
-	  padding-right: 16px;
-	  margin-right: 16px;
-	  height: 150px;
-	}
-  
-	.ad--trout {
-	  grid-area: top--right;
-	  border-bottom: 2px dotted #5f5a44;
-	  border-left: 2px dotted #5f5a44;
-	  height: 150px;
-	  padding-left: 16px;
-	  margin-left: 16px;
-	}
-  
-	.ad--lodging {
-	  border-right: 2px dotted #5f5a44;
-	  border-left: 2px dotted #5f5a44;
-	  padding: 0 16px;
-	  width: 16.666%;
-	}
-  
-	.ad--graham {
-	  border-right: 2px dotted #5f5a44;
-	  padding: 0 16px;
-	  width: 16.666%;
-	}
-  
-	.ad--voice {
-	  border-right: 2px dotted #5f5a44;
-	  padding: 0 16px;
-	  width: 16.666%;
-	}
-  
-	.ad--trail {
-	  border-right: 2px dotted #5f5a44;
-	  padding: 0 16px;
-	  width: 30%;
-	}
-  
-	.ad--kayak {
-	  width: 20%;
-	  border-right: 2px dotted #5f5a44;
 	}
   
 	.sides--container {

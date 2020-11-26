@@ -1,3 +1,7 @@
+main {
+	border-top: 10px solid #293546;
+}
+
 .header {
 	text-align: center;
 }
@@ -5,6 +9,7 @@
 .header h1 {
 	font-size: 80px;
 	font-weight: 400;
+	color: #293546;
 }
 
 .covid-line {
@@ -16,11 +21,13 @@
 .header h3 {
 	font-size: 20px;
 	font-weight: 200;
+	color: #293546;
 }
 
 .content {
 	padding-left: 10%;
 	padding-right: 10%;
+	color: #293546;
 }
 
 .subheader {

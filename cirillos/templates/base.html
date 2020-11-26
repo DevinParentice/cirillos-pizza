@@ -4,11 +4,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+		content="Cirillo's Artisan Pizza, local to West Chester. If you're looking for a special meal, look no further.">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
 	{% block head %}{% endblock %}
-	<title>Cirillo's</title>
+	<title>Cirillo’s Artisan Pizza - West Chester</title>
 	<script src="https://kit.fontawesome.com/0af8163bd1.js" crossorigin="anonymous"></script>
 	<!-- Facebook Pixel Code -->
 	<script>
@@ -35,8 +37,8 @@
 	<ul class="navbar-nav">
 		<li class="nav-logo">
 			<a href="{{ url_for('main.home') }}" class="nav-link logo-link">
-				<span class="link-text logo-text" style="padding-bottom: 30px;">Cirillo's</span>
-				<span style="margin-top: 90px; letter-spacing: 6px;" class="link-text">Artisan Pizza</span>
+				<h1 class="link-text logo-text" style="padding-bottom: 30px;">Cirillo's</h1>
+				<h1 style="margin-top: 90px; letter-spacing: 6px; color: #e0bc64;" class="link-text">Artisan Pizza</h1>
 			</a>
 		</li>
 
@@ -75,8 +77,7 @@
 						</p>
 					</li>
 					<li class="nav-item">
-						<a href="https://www.doordash.com/business/475801/?utm_source=partner-link&utm_medium=website&utm_campaign=475801"
-							class="nav-link" target="_blank">
+						<a href="#" class="nav-link" target="_blank">
 							<span class="link-text delivery-image"><img src="../static/img/doordash.png"
 									alt="DoorDash Ordering" class="online-icons"></span>
 						</a>
@@ -181,15 +182,11 @@
 
 			<ul class="nav__ul">
 				<li>
-					<a href="#">Privacy Policy</a>
+					<a href="{{ url_for('main.privacy') }}">Privacy Policy</a>
 				</li>
 
 				<li>
-					<a href="#">Terms of Use</a>
-				</li>
-
-				<li>
-					<a href="#">Sitemap</a>
+					<a href="{{ url_for('main.sitemap') }}">Sitemap</a>
 				</li>
 			</ul>
 		</li>
