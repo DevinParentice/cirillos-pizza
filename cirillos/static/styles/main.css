@@ -255,6 +255,13 @@ a {
 	padding: 10px;
 }
 
+.error-container {
+	text-align: center;
+	padding-top: 25%;
+	padding-bottom: 25%;
+	color: #293546;
+}
+
   @media screen and (min-width: 24.375em) {
 	.legal .legal__links {
 	  margin-left: auto;
