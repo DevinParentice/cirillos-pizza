@@ -179,8 +179,15 @@ a {
   .footer address a {
 	  text-decoration: none;
 	  color: #999;
+	  margin-bottom: 10px;
   }
   
+  .footer address br {
+	  display: block;
+	  content: "";
+	  margin-top: 10px;
+  }
+
   .footer__btn {
 	display: flex;
 	align-items: center;
