@@ -398,7 +398,7 @@ a {
 		display: none;
 	}
 
-	i:not(.fa-chevron-down):not(.fa-facebook):not(.fa-instagram):not(.fa-yelp):not(.fa-shopping-bag):not(.fa-car-side) {
+	i:not(.fa-chevron-down):not(.fa-facebook):not(.fa-instagram):not(.fa-yelp):not(.fa-shopping-bag) {
 		display: none;
 	}
 
