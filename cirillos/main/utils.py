@@ -2,8 +2,10 @@ from flask.templating import render_template
 from cirillos import mail
 from flask_mail import Message
 from dotenv import load_dotenv
+from datetime import datetime
+from pytz import timezone
 import os
-import datetime
+
 
 load_dotenv()
 
@@ -16,4 +18,5 @@ def send_email(form):
 
 
 def get_time():
-    return datetime.datetime.now().hour
+    tz = timezone('US/Eastern')
+    return datetime.now(tz).hour
