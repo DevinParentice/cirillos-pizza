@@ -1,9 +1,14 @@
 from flask.helpers import url_for
 from cirillos.main.form import ContactForm
 from flask import render_template, Blueprint, redirect, flash
-from cirillos.main.utils import send_email
+from cirillos.main.utils import send_email, get_time
 
 main = Blueprint('main', __name__)
+
+
+@main.context_processor
+def inject_time():
+    return dict(time=get_time())
 
 
 @main.route('/')

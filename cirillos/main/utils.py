@@ -3,6 +3,7 @@ from cirillos import mail
 from flask_mail import Message
 from dotenv import load_dotenv
 import os
+import datetime
 
 load_dotenv()
 
@@ -12,3 +13,7 @@ def send_email(form):
                   recipients=[os.getenv('MAIL_USERNAME')])
     msg.html = render_template('email.html', form=form)
     mail.send(msg)
+
+
+def get_time():
+    return datetime.datetime.now().hour

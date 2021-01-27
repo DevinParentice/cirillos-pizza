@@ -69,8 +69,7 @@
 				<i class="fas fa-utensils"></i>
 				<span class="link-text">Menu</span>
 			</a>
-		</li>
-
+		</li>		
 		<li class="nav-item dropdown">
 			<p class="nav-link dropdown-text" style="cursor: default;">
 				<span class="link-text dropdown-text">Online Ordering <i class="fas fa-chevron-down"></i></span>
@@ -85,6 +84,13 @@
 							<script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 						</a>
 					</li>
+					{% if time >= 17 and time < 21 %}
+					<li class="nav-item">
+						<a href="https://www.cuisinetogo.net/r/1109/restaurants/delivery/Cirillos-Artisan-Pizza-West-Chester" class="nav-link" target="_blank">
+							<span class="link-text gloria"><i class="fas fa-car-side"></i></span>
+						</a>
+					</li>
+					{% else %}
 					<li class="nav-item">
 						<a href="https://www.doordash.com/store/spicy-pig-cafe-west-chester-1063785/en-US"
 							class="nav-link" target="_blank">
@@ -99,6 +105,7 @@
 									alt="Grubhub Ordering" class="online-icons"></span>
 						</a>
 					</li>
+					{% endif %}
 				</ul>
 			</div>
 		</li>
