@@ -1,10 +1,10 @@
-{% extends "base.html" %}
-
-{% block head %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/form.css') }}">
-{% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block head %}
+<link
+	rel="stylesheet"
+	type="text/css"
+	href="{{ url_for('static', filename='styles/form.css') }}"
+/>
+{% endblock %} {% block content %}
 
 <body>
 	<main>
@@ -12,96 +12,75 @@
 			<h2 class="form-title">Contact Us</h2>
 			{% for message in form.name.errors %}
 			<div class="flash">{{ message }}</div>
-			{% endfor %}
-
-			{% for message in form.email.errors %}
+			{% endfor %} {% for message in form.email.errors %}
+			<div class="flash">{{ message }}</div>
+			{% endfor %} {% for message in form.subject.errors %}
+			<div class="flash">{{ message }}</div>
+			{% endfor %} {% for message in form.message.errors %}
 			<div class="flash">{{ message }}</div>
 			{% endfor %}
 
-			{% for message in form.subject.errors %}
-			<div class="flash">{{ message }}</div>
-			{% endfor %}
-
-			{% for message in form.message.errors %}
-			<div class="flash">{{ message }}</div>
-			{% endfor %}
-
-			<form action="{{ url_for('main.contact') }}" method=post>
+			<form action="{{ url_for('main.contact') }}" method="post">
 				{{ form.hidden_tag() }}
 
 				<div class="form-group">
-					{{ form.name.label(class="form-control-label") }}
-
-					{% if form.name.errors %}
-					{{ form.name(class="form-control form-control-lg is-invalid") }}
+					{{ form.name.label(class="form-control-label") }} {% if
+					form.name.errors %} {{ form.name(class="form-control form-control-lg
+					is-invalid") }}
 					<div class="invalid-feedback">
 						{% for error in form.name.errors %}
 						<span>{{ error }}</span>
 						{% endfor %}
 					</div>
-					{% else %}
-					{{ form.name(class="text-input") }}
-					{% endif %}
+					{% else %} {{ form.name(class="text-input") }} {% endif %}
 				</div>
 
 				<div class="form-group">
-					{{ form.email.label(class="form-control-label") }}
-
-					{% if form.email.errors %}
-					{{ form.email(class="form-control form-control-lg is-invalid") }}
+					{{ form.email.label(class="form-control-label") }} {% if
+					form.email.errors %} {{ form.email(class="form-control form-control-lg
+					is-invalid") }}
 					<div class="invalid-feedback">
 						{% for error in form.email.errors %}
 						<span>{{ error }}</span>
 						{% endfor %}
 					</div>
-					{% else %}
-					{{ form.email(class="text-input") }}
-					{% endif %}
+					{% else %} {{ form.email(class="text-input") }} {% endif %}
 				</div>
 
 				<div class="form-group">
-					{{ form.subject.label(class="form-control-label") }}
-
-					{% if form.subject.errors %}
-					{{ form.subject(class="form-control form-control-lg is-invalid") }}
+					{{ form.subject.label(class="form-control-label") }} {% if
+					form.subject.errors %} {{ form.subject(class="form-control
+					form-control-lg is-invalid") }}
 					<div class="invalid-feedback">
 						{% for error in form.subject.errors %}
 						<span>{{ error }}</span>
 						{% endfor %}
 					</div>
-					{% else %}
-					{{ form.subject(class="text-input") }}
-					{% endif %}
+					{% else %} {{ form.subject(class="text-input") }} {% endif %}
 				</div>
 
 				<div class="form-group">
-					{{ form.message.label(class="form-control-label") }}
-					{{ form.message(class="text-input textarea-input") }}
+					{{ form.message.label(class="form-control-label") }} {{
+					form.message(class="text-input textarea-input") }}
 				</div>
 				<h3 class="input-info-text">
 					Please provide all the information that you are able to.
 				</h3>
 
 				<div class="form-group">
-					{{ form.spam.label(class="form-control-label") }}
-
-					{% if form.spam.errors %}
-					{{ form.spam(class="form-control form-control-lg is-invalid") }}
+					{{ form.spam.label(class="form-control-label") }} {% if
+					form.spam.errors %} {{ form.spam(class="form-control form-control-lg
+					is-invalid") }}
 					<div class="invalid-feedback">
 						{% for error in form.spam.errors %}
-						<p class="flash" style="margin-top: 2vh;">{{ error }}</p>
+						<p class="flash" style="margin-top: 2vh">{{ error }}</p>
 						{% endfor %}
 					</div>
-					{% else %}
-					{{ form.spam(class="text-input") }}
-					{% endif %}
+					{% else %} {{ form.spam(class="text-input") }} {% endif %}
 				</div>
 				{{ form.submit(class="submit-button") }}
 			</form>
 		</div>
 	</main>
-
-
-
 </body>
 {% endblock %}
